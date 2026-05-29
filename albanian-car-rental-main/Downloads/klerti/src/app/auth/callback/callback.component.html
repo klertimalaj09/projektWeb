@@ -1,0 +1,15 @@
+<div class="callback-container">
+  @if (loading) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Processing your login...</p>
+    </div>
+  }
+  
+  @if (error) {
+    <div class="error">
+      <p>{{ error }}</p>
+      <a href="/login">Back to Login</a>
+    </div>
+  }
+</div>

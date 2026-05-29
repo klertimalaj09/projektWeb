@@ -1,0 +1,3 @@
+@for(car of cars(); track car.id){
+<app-car [car]="car" (bookCarEmitter)="bookCar($event)"></app-car>
+}

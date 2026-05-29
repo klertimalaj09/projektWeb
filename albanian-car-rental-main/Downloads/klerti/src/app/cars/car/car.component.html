@@ -1,0 +1,16 @@
+<div class="car-item">
+  <h3>{{car?.brand}} {{car?.model}}</h3>
+  <div class="car-img" >
+    <img src="img/{{car?.image}}">
+
+  </div>
+  <ul>
+    <li><strong>Color:</strong> {{car?.color}}</li>
+    <li><strong>Year:</strong> {{car?.year}}</li>
+    <li><strong>Engine:</strong> {{car?.cc}}</li>
+    <li><strong>Fuel type:</strong> {{car?.fuelType}}</li>
+  </ul>
+
+  <h4><small>Price per day:</small> {{car?.price | currency: 'EUR'}}</h4>
+  <button *ngIf="showBooking" (click)="bookCar()">Book</button>
+</div>

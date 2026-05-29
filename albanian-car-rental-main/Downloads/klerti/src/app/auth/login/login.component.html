@@ -1,0 +1,40 @@
+<div class="form-container" [formGroup]="loginForm">
+  <h2>Login to Albanian Car Rental</h2>
+  
+  <!-- Local Login Section -->
+  <div class="auth-section">
+    <h3>Local Login</h3>
+    <div class="input-container">
+      <input placeholder="email" type="email" formControlName="email">
+    </div>
+    <div class="input-container">
+      <input placeholder="password" type="password" formControlName="password">
+    </div>
+    <button class="btn-primary" (click)="login()">LOGIN</button>
+    
+    @if (error) {
+      <p class="error">{{error}}</p>
+    }
+  </div>
+
+  <!-- Divider -->
+  <div class="divider">
+    <span>OR</span>
+  </div>
+
+  <!-- Auth0 Login Section -->
+  <div class="auth-section">
+    <h3>Login with Auth0</h3>
+    <button class="btn-auth0" (click)="loginWithAuth0()">
+      <span>🔐 Sign in with Auth0</span>
+    </button>
+    <p class="info-text">Securely login using your Auth0 account</p>
+  </div>
+
+  <!-- Demo Credentials Info -->
+  <div class="demo-info">
+    <p><strong>Demo Credentials:</strong></p>
+    <p>Email: klerti&#64;klerti</p>
+    <p>Password: klerti2009</p>
+  </div>
+</div>

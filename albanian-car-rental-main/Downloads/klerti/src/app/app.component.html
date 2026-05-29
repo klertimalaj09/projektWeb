@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="left">
+
+    <h1>{{name}} Premium Car Rental</h1>
+  </div>
+
+  <div class="right">
+    <a [routerLink]="'/'" routerLinkActive="active-link">Home</a>&nbsp;
+@if(isLoggedIn()){
+  <a [routerLink]="'/create'" routerLinkActive="active-link">Create Car</a>&nbsp;
+  <a [routerLink]="'/bookings'" routerLinkActive="active-link">View Bookings</a>&nbsp;
+
+  <a [routerLink]="'/'" (click)="logout()" routerLinkActive="active-link">Logout</a>
+
+} @else {
+  <a [routerLink]="'/login'" routerLinkActive="active-link">Login</a>&nbsp;
+
+}
+  </div>
+</div>
+
+<div class="body-container">
+  <router-outlet />
+
+</div>
+<div class="footer">
+  Developed by Klerti Malaj &#64;TUMO Angular Lab
+</div>

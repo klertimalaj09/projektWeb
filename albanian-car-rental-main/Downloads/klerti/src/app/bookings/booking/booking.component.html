@@ -1,0 +1,25 @@
+
+  @if(bookings().length > 0){
+
+    @for(booking of bookingList; track booking.carId){
+      <div class="booking-detail">
+        <h4>{{booking.customerName}}</h4>
+        <div class="left">
+          <div class="image-container">
+            <img src="img/{{booking.car.image}}">
+
+          </div>
+        </div>
+        <div class="right">
+          <div class="car-details">
+            <h5>{{booking.car.brand}} {{booking.car.model}}</h5>
+            <p>From <strong>{{booking.startDate}}</strong> to <strong>{{booking.endDate}}</strong></p>
+
+            <div class="price-paid">{{booking.price | currency: 'EUR'}}</div>
+          </div>
+        </div>
+
+      </div>
+    }
+  }
+

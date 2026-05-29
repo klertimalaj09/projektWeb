@@ -1,0 +1,32 @@
+<div class="form-container" [formGroup]="createCar">
+  <div class="input-container">
+    <input placeholder="brand" formControlName="brand">
+  </div>
+  <div class="input-container">
+    <input placeholder="model" formControlName="model">
+  </div>
+  <div class="input-container">
+    <input placeholder="image" type="text" formControlName="image">
+  </div>
+  <div class="input-container">
+    <input placeholder="year" type="number" formControlName="year">
+  </div>
+  <div class="input-container">
+    <input placeholder="cc" type="number" formControlName="cc">
+  </div>
+  <div class="input-container">
+    <select formControlName="fuelType" placeholder="Fuel Type">
+      <option value="Diesel">Diesel</option>
+      <option value="Electric">Electric</option>
+      <option value="Gas">Gas</option>
+      <option value="Benzine">Benzine</option>
+    </select>
+  </div>
+  <div class="input-container">
+    <input placeholder="color" formControlName="color">
+  </div>
+  <div class="input-container">
+    <input placeholder="price" type="number" formControlName="price">
+  </div>
+  <button (click)="saveCar()">Save Car</button>
+</div>

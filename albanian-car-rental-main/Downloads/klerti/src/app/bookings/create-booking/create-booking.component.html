@@ -1,0 +1,32 @@
+<div class="booking-container">
+  @let car = carToBook;
+  @if(car){
+    <div class="left">
+      <app-car [car]="car" [showBooking]="false"></app-car>
+    </div>
+  }
+
+  <div class="right">
+    <div class="form-container" [formGroup]="createBooking">
+      <div class="input-container">
+        <label for="customerName">Custom Name</label>
+        <input name="customerName" type="text" placeholder="customer name" formControlName="customerName">
+      </div>
+      <div class="input-container">
+        <label for="startDate">Start Date</label>
+        <input name="startDate" type="date" placeholder="startDate" formControlName="startDate">
+      </div>
+      <div class="input-container">
+        <label for="endDate">End Date</label>
+        <input name="endDate" type="date" placeholder="endDate" formControlName="endDate">
+      </div>
+      <div class="total-price">
+        <strong>Total price to pay: </strong>{{totalPrice() | currency: 'EUR'}}
+
+      </div>
+
+      <button (click)="bookCar()">Book Car</button>
+    </div>
+  </div>
+</div>
+
